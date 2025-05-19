@@ -1,0 +1,49 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+credentials/service_account.json
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+instance/.env
+start.sh.bak
+
+# System junk
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+__pycache__
+.__pycache__
+/__pycache__
+/.__pycache__
+new.env
+.env
+.env.new
+
