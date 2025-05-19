@@ -1,7 +1,7 @@
 # Bodega Esports Platform — Backend
 
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)
-![Render](https://img.shields.io/badge/deployed%20on-Render-46b946)
+![Railway](https://img.shields.io/badge/deployed%20on-Railway-46b946)
 ![CI](https://github.com/wersplat/bodega-esports-platform/actions/workflows/ci.yml/badge.svg)
 ![License](https://img.shields.io/github/license/wersplat/bodega-esports-platform)
 
@@ -16,7 +16,7 @@ The backend is a FastAPI service providing a REST API for managing players, team
 - **Uvicorn** (ASGI server)
 - **SQLAlchemy** (ORM, Supabase Postgres backend)
 - **Docker** (optional for local dev)
-- **Render** (cloud deployment)
+- **Railway** (cloud deployment)
 
 ## Features
 
@@ -67,9 +67,9 @@ Key environment variables:
 - `DISCORD_OAUTH_CLIENT_ID` / `DISCORD_OAUTH_CLIENT_SECRET` — Discord OAuth credentials
 - `SECRET_KEY` — FastAPI secret
 
-## Deployment on Render
+## Deployment on Railway
 
-- Render auto-detects `backend/` as a web service.
+- Railway auto-detects `backend/` as a web service.
 - **Build command:** `pip install -r requirements.txt`
 - **Start command:** `uvicorn app.main:app --host 0.0.0.0 --port 10000`
 - **Health check:** `/healthz`
