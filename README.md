@@ -7,14 +7,14 @@
 
 ## Overview
 
-The backend is a FastAPI service providing a REST API for managing players, teams, matches, and stats for the Bodega Esports Platform. It includes endpoints for leaderboards, standings, OCR-based stat extraction, and integrates with Discord for authentication.
+The backend is a FastAPI service providing a REST API for managing players, teams, matches, and stats for the Bodega Esports Platform. It includes endpoints for leaderboards, standings, and integrates with Discord for authentication.
 
 ## Tech Stack
 
 - **Python 3.10+**
 - **FastAPI** (web framework)
 - **Uvicorn** (ASGI server)
-- **SQLAlchemy** (ORM, Supabase Postgres backend)
+- **SQLAlchemy** (ORM, Postgres backend)
 - **Docker** (optional for local dev)
 - **Railway** (cloud deployment)
 
@@ -23,10 +23,8 @@ The backend is a FastAPI service providing a REST API for managing players, team
 - Core API endpoints:  
   - `/api/leaderboard`  
   - `/api/standings`  
-  - `/api/ocr`  
   - `/api/teams`  
   - `/api/matches`
-- Row Level Security (RLS) via Supabase
 - Stat normalization & MVP scoring
 - CSV/Google Sheets export hooks
 - Discord OAuth compatibility
@@ -73,8 +71,7 @@ bodega-backend/
 
 Key environment variables:
 
-- `DATABASE_URL` — Supabase Postgres connection string
-- `SUPABASE_KEY` — Supabase service key
+- `DATABASE_URL` — Postgres connection string
 - `DISCORD_OAUTH_CLIENT_ID` / `DISCORD_OAUTH_CLIENT_SECRET` — Discord OAuth credentials
 - `SECRET_KEY` — FastAPI secret
 
@@ -106,7 +103,6 @@ Key environment variables:
 
 - Issues and PRs welcome!
 - Follow PEP8 and repo coding style.
-- Branches: `master` = production, `react` = frontend.
 
 ## License & Author
 
