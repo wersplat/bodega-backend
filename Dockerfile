@@ -28,6 +28,10 @@ RUN apt-get update && apt-get install -y apt-transport-https ca-certificates cur
     && apt-get update \
     && apt-get install -y doppler
 
+# Install Python dependencies in runner stage
+COPY requirements.txt ./
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
 # Copy built code and installed packages from build stage
 COPY --from=builder /app /app
 
