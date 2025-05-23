@@ -20,3 +20,5 @@ sentry-sdk
 alembic
 fastapi.security
 httpx
+doppler
+sentry-cli
