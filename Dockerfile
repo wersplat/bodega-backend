@@ -7,11 +7,6 @@ RUN apt-get update && apt-get install -y \
     curl wget gcc libpq-dev build-essential apt-transport-https ca-certificates gnupg \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Doppler CLI (Debian 11+/Ubuntu 22.04+)
-RUN curl -sLf --retry 3 --tlsv1.2 --proto "=https" 'https://packages.doppler.com/public/cli/gpg.DE2A7741A397C129.key' | gpg --dearmor -o /usr/share/keyrings/doppler-archive-keyring.gpg \
-    && echo "deb [signed-by=/usr/share/keyrings/doppler-archive-keyring.gpg] https://packages.doppler.com/public/cli/deb/debian any-version main" > /etc/apt/sources.list.d/doppler-cli.list \
-    && apt-get update \
-    && apt-get install -y doppler
 
 # Install Sentry CLI
 RUN pip install --upgrade pip && \
