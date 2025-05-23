@@ -7,10 +7,12 @@ RUN apt-get update && apt-get install -y \
     curl wget gcc libpq-dev build-essential apt-transport-https ca-certificates gnupg \
     && rm -rf /var/lib/apt/lists/*
 
-
 # Install Sentry CLI
 RUN pip install --upgrade pip && \
     pip install sentry-cli
+
+# Copy all code into the image (including app directory)
+COPY . /app
 
 # --- Runner Stage ---
 FROM python:3.12-slim AS runner
